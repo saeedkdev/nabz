@@ -2,7 +2,7 @@ import * as Dialog from '@radix-ui/react-dialog';
 import { IoMdClose } from 'react-icons/io';
 
 interface ModalProps {
-    open: boolean;
+    isOpen: boolean;
     onChange: (open: boolean) => void;
     title: string;
     description: string;
@@ -10,7 +10,7 @@ interface ModalProps {
 }
 
 const Modal: React.FC<ModalProps> = ({
-    open,
+    isOpen,
     onChange,
     title,
     description,
@@ -18,9 +18,9 @@ const Modal: React.FC<ModalProps> = ({
 }) => {
     return (
         <Dialog.Root 
-            open={open}
+            open={isOpen}
             onOpenChange={onChange}
-            defaultOpen={open}
+            defaultOpen={isOpen}
         >
             <Dialog.Portal>
                 <Dialog.Overlay className="bg-neutral-900/90 backdrop-blur-sm fixed inset-0" />
