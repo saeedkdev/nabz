@@ -19,7 +19,7 @@ const PlayButton = () => {
         group-hover:translate-y-0
       "
     >
-      <FaPlay className="text-black hover:text-white" />
+      <FaPlay className="text-black" />
     </button>
    );
 }
