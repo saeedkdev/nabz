@@ -78,7 +78,10 @@ const LikeButton: React.FC<LikeButtonProps> = ({
                 return;
             }
             setIsLiked(true);
+            toast.success("Liked!");
         }
+
+        // router.refresh();
     }
 
     return (
