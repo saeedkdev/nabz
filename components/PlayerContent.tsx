@@ -13,7 +13,7 @@ import useSound from "use-sound";
 
 interface PlayerContentProps {
     song: Song;
-    songUrl: SongUrl;
+    songUrl: string;
 }
 
 
@@ -60,7 +60,7 @@ const PlayerContent: React.FC<PlayerContentProps> = ({
 
 
     const [play, { pause, sound }] = useSound(
-        songUrl.publicUrl,
+        songUrl,
         {
             volume,
             onplay: () => setIsPlaying(true),
